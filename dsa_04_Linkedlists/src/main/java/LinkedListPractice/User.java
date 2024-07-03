@@ -1,13 +1,14 @@
 package LinkedListPractice;
 
 public class User {
-    int id;
+
     String name;
+    String lastName;
     User next;
 
-    public User(int id, String name){
-        this.id =id;
+    public User(String name, String lastName){
         this.name= name;
+        this.lastName = lastName;
     }
 
 }
