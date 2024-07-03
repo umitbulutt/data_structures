@@ -1,4 +1,4 @@
-package carLinkedList;
+package LinkedListPractice;
 
 public class UserLinkCreationTest {
 
@@ -15,6 +15,11 @@ public class UserLinkCreationTest {
 
         User head = user1;
         User current =head;
+
+        while(current!=null){
+            System.out.println(current.id);
+            current = current.next;
+        }
 
 
 

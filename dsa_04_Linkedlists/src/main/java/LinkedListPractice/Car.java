@@ -1,4 +1,4 @@
-package carLinkedList;
+package LinkedListPractice;
 
 public class Car {
 
