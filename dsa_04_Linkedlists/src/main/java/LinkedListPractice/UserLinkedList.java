@@ -28,5 +28,15 @@ public class UserLinkedList {
         size++;
 
     }
+    void printNames(){
+        if (isEmpty()) System.out.println("List is empty");
+
+        User current = head;
+        while(current!=null){
+            System.out.println(current.name );
+            current = current.next;
+        }
+    }
+
 
 }
