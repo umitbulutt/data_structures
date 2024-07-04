@@ -1,10 +1,8 @@
-package main.java;
-
 public class SNode<T> {
-    T value;
-    SNode<T> next;
+    public T value;
+    SNode next;
 
-    public SNode(T value){
+    public SNode(T value) {
         this.value = value;
     }
 }

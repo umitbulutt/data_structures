@@ -29,6 +29,9 @@ public class SinglyLinkedListApp {
 
         mylist.printNodes();
 
+        mylist.addLast(10);
+        mylist.printNodes();
+
 
     }
 }

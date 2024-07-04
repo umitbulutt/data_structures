@@ -3,6 +3,7 @@ public class MySinglyLinkedList {
     Node tail;
     int size;
 
+
     boolean isEmpty() {
         return head == null;
     }
@@ -125,22 +126,22 @@ public class MySinglyLinkedList {
         }
         //ptr1 is on the kth element from the last
         //Do delete operation
-            //if ptr1 is equal the head
-            if (ptr1 == head){
-                head =  ptr1.next;
-                ptr1.next=null;
-                size--;
-            }
-            //if ptr2 is equal the tail
-            else if(ptr1==tail){
-                tail=prev;
-                prev.next=null;
-                size--;
-            }else{
-                prev.next=ptr1.next;
-                ptr1.next=null;
-                size--;
-            }
+        //if ptr1 is equal the head
+        if (ptr1 == head){
+            head =  ptr1.next;
+            ptr1.next=null;
+            size--;
+        }
+        //if ptr2 is equal the tail
+        else if(ptr1==tail){
+            tail=prev;
+            prev.next=null;
+            size--;
+        }else{
+            prev.next=ptr1.next;
+            ptr1.next=null;
+            size--;
+        }
     }
     public void removeKthFromLast2(int k){
         Node ptr1=head;
@@ -168,10 +169,18 @@ public class MySinglyLinkedList {
 
 
 
+    void addLast(int data){
+        Node node = new Node(data);
+        if (isEmpty()) head = tail = node;
+        else{
+            tail.next = node;
+            tail = node;
+        }
+        size++;
 
 
 
 
-
+    }
 
 }
