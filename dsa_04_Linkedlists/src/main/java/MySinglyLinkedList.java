@@ -142,6 +142,29 @@ public class MySinglyLinkedList {
                 size--;
             }
     }
+    public void removeKthFromLast2(int k){
+        Node ptr1=head;
+        Node ptr2=head;
+        for(int i=0;i<k-1;i++) {
+            ptr2=ptr2.next;
+            if (ptr2==null)  System.out.println("Less than k elements");
+            else if(ptr2.next==null){
+                head=ptr1.next;
+                ptr1.next=null;
+                return;
+            }
+        }
+        while(ptr2.next.next!=null) {
+
+            ptr1=ptr1.next;
+            ptr2=ptr2.next;
+        }
+        ptr1.next=ptr1.next.next;
+        ptr1=ptr1.next;
+        ptr1=null;
+
+
+    }
 
 
 
