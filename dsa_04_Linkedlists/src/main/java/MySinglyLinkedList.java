@@ -97,7 +97,7 @@ public class MySinglyLinkedList {
         }
 
         //Move both pinters until ptr2 hits the last element
-        while(ptr2!=null){
+        while(ptr2.next!=null){
             ptr1 = ptr1.next;
             ptr2 = ptr2.next;
         }
@@ -118,7 +118,7 @@ public class MySinglyLinkedList {
         }
 
         //Move both pinters until ptr2 hits the last element
-        while(ptr2!=null){
+        while(ptr2.next!=null){
             prev = ptr1;
             ptr1 = ptr1.next;
             ptr2 = ptr2.next;
