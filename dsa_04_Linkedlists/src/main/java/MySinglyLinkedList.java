@@ -106,7 +106,42 @@ public class MySinglyLinkedList {
 
     }
 
+    public void removeKthItemFromLast(int k){
+        //create 2 pointers
+        Node ptr1 = head;
+        Node ptr2 = head;
+        Node prev = null;
 
+        //move ptr2 k-1 times
+        for (int i = 0; i < k-1; i++) {
+            ptr2 = ptr2.next;
+        }
+
+        //Move both pinters until ptr2 hits the last element
+        while(ptr2!=null){
+            prev = ptr1;
+            ptr1 = ptr1.next;
+            ptr2 = ptr2.next;
+        }
+        //ptr1 is on the kth element from the last
+        //Do delete operation
+            //if ptr1 is equal the head
+            if (ptr1 == head){
+                head =  ptr1.next;
+                ptr1.next=null;
+                size--;
+            }
+            //if ptr2 is equal the tail
+            else if(ptr1==tail){
+                tail=prev;
+                prev.next=null;
+                size--;
+            }else{
+                prev.next=ptr1.next;
+                ptr1.next=null;
+                size--;
+            }
+    }
 
 
 
